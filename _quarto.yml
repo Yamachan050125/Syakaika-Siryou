@@ -7,7 +7,7 @@ website:
   # 左側のメニュー（サイドバー）
   sidebar:
     style: "docked"
-    background: "#298Oe3"
+    background: "#2980e3"
     search: true
     collapse-level: 1 
 
