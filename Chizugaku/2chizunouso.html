@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>２　メルカトル図法 – 社会科のおもちゃ箱</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a35d343c8bdbcb87d3b82ed68e48a46c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "一致なし",
+    "search-matching-documents-text": "一致した文書",
+    "search-copy-link-title": "検索へのリンクをコピー",
+    "search-hide-matches-text": "追加の検索結果を非表示",
+    "search-more-match-text": "追加の検索結果",
+    "search-more-matches-text": "追加の検索結果",
+    "search-clear-button-title": "消去",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "検索",
+    "search-label": "サーチ"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Chizugaku/index.html">地図学</a></li><li class="breadcrumb-item"><a href="../Chizugaku/2chizunouso.html">2 メルカトル図法</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="サイドバーを切り替える" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="サーチ" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">社会科のおもちゃ箱</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="サーチ"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">政治経済（経済分野）</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Keizaigaku/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">政治経済（経済分野）トップ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Keizaigaku/Sijyou.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">経済活動と市場</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">哲学・倫理学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">哲学・倫理学トップ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/1RinriGakusyusidouyouryou.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">平成30年告示学習指導要領「高校公民 倫理」のポイント</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/2Tetsugakutekisikou.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">哲学的思考と高校倫理学の難しさ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/3Kihanrinrigaku.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">客観主義と主観主義</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/4Kourisyugi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">功利主義と義務論</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/5Syakaikeiyakusetu.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">社会契約説</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Rinri/6Seimeirinnrigaku.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">応用倫理学と生命倫理学</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">地理学</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Shizenchirigaku/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">地理学トップ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Shizenchirigaku/1Chirigakutoha.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">地理学</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Shizenchirigaku/2Taikijyunkan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">大気大循環</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Shizenchirigaku/3Keppen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ケッペンの気候区分</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Shizenchirigaku/4Nettai.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">各気候の特徴</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">地図学</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Chizugaku/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">地図学トップ</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Chizugaku/1chizunomikata.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1 地図の特性と注意</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Chizugaku/2chizunouso.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2 メルカトル図法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Chizugaku/3Seikyohouizuhou.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3 正距方位図法</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Chizugaku/4Moruwaide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4 サンソン図法・モルワイデ図法</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">教育(教員向け)</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="セクションを切り替え">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Kyouiku/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">教育トップ</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目次</h2>
+   
+  <ul>
+  <li><a href="#メルカトル図法を作る" id="toc-メルカトル図法を作る" class="nav-link active" data-scroll-target="#メルカトル図法を作る">メルカトル図法を作る</a>
+  <ul class="collapse">
+  <li><a href="#地球儀から表面の地図部分を剥いてみる" id="toc-地球儀から表面の地図部分を剥いてみる" class="nav-link" data-scroll-target="#地球儀から表面の地図部分を剥いてみる">① 地球儀から表面の地図部分を剥いてみる</a></li>
+  <li><a href="#横方向に引き延ばして隙間をなくす" id="toc-横方向に引き延ばして隙間をなくす" class="nav-link" data-scroll-target="#横方向に引き延ばして隙間をなくす">② 横方向に引き延ばして隙間をなくす</a></li>
+  <li><a href="#縦方向にも引き延ばす完成" id="toc-縦方向にも引き延ばす完成" class="nav-link" data-scroll-target="#縦方向にも引き延ばす完成">③ 縦方向にも引き延ばす（完成）</a></li>
+  </ul></li>
+  <li><a href="#メルカトル図法の特性と歪み" id="toc-メルカトル図法の特性と歪み" class="nav-link" data-scroll-target="#メルカトル図法の特性と歪み">メルカトル図法の特性と歪み</a>
+  <ul class="collapse">
+  <li><a href="#メリット" id="toc-メリット" class="nav-link" data-scroll-target="#メリット">メリット</a></li>
+  <li><a href="#デメリット" id="toc-デメリット" class="nav-link" data-scroll-target="#デメリット">デメリット</a></li>
+  <li><a href="#まとめると" id="toc-まとめると" class="nav-link" data-scroll-target="#まとめると">まとめると…</a></li>
+  </ul></li>
+  <li><a href="#発展横メルカトル図法" id="toc-発展横メルカトル図法" class="nav-link" data-scroll-target="#発展横メルカトル図法">[発展]横メルカトル図法</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Chizugaku/index.html">地図学</a></li><li class="breadcrumb-item"><a href="../Chizugaku/2chizunouso.html">2 メルカトル図法</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">２　メルカトル図法</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="メルカトル図法を作る" class="level2">
+<h2 class="anchored" data-anchor-id="メルカトル図法を作る">メルカトル図法を作る</h2>
+<p>地球は言わずもがな球体だ。地球儀は、地図を作るうえで問題となる<strong>距離・面積・方位・角度</strong>の４つをすべて正確に示す最強のツールだ。しかし、<strong>一度に世界全体を見るということができない</strong>。これが、最も痛い地球儀の欠点である。</p>
+<p>では、ここから地図を作ってみよう</p>
+<section id="地球儀から表面の地図部分を剥いてみる" class="level3">
+<h3 class="anchored" data-anchor-id="地球儀から表面の地図部分を剥いてみる">① 地球儀から表面の地図部分を剥いてみる</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="png\p100f_100.png" class="img-fluid figure-img"></p>
+<figcaption>沼津高専より</figcaption>
+</figure>
+</div>
+<p>この状態では、正直なところ地図として使いにくい。地図間に空白があるので、非常に見にくい。</p>
+<p>では、<strong>横方向に引き伸ばして隙間をなくしてみよう</strong>。</p>
+</section>
+<section id="横方向に引き延ばして隙間をなくす" class="level3">
+<h3 class="anchored" data-anchor-id="横方向に引き延ばして隙間をなくす">② 横方向に引き延ばして隙間をなくす</h3>
+<p><img src="png\p110f_100.png" class="img-fluid"></p>
+<p>これでかなり地図っぽくなった。今の状態のこの地図を、<strong>正距円筒図法</strong>（または<strong>正方形図法</strong>）という。この地図は、引き延ばしたがために、<strong>角度・面積・方位</strong>のすべてが異なっており、<strong>距離も赤道上のみ正しくなる</strong>という地図になっている。（羽田(2021), p.174-175）これでは使いようがない。</p>
+<p>では、せめて角度を正しくしよう。横方向に引き伸ばした分だけ、縦方向にも引き伸ばす。</p>
+</section>
+<section id="縦方向にも引き延ばす完成" class="level3">
+<h3 class="anchored" data-anchor-id="縦方向にも引き延ばす完成">③ 縦方向にも引き延ばす（完成）</h3>
+<p><img src="png\p120f_100.png" class="img-fluid"></p>
+<p>こうしてできたのが、1569年にGerardus Mercator（ゲラルドゥス・メルカトル）という地理学者が発明した<strong>メルカトル図法</strong>である。</p>
+</section>
+</section>
+<section id="メルカトル図法の特性と歪み" class="level2">
+<h2 class="anchored" data-anchor-id="メルカトル図法の特性と歪み">メルカトル図法の特性と歪み</h2>
+<section id="メリット" class="level3">
+<h3 class="anchored" data-anchor-id="メリット">メリット</h3>
+<section id="角度が正しい" class="level4">
+<h4 class="anchored" data-anchor-id="角度が正しい">角度が正しい</h4>
+<p>メルカトル図法は、<strong>南北の方位が正しいことと、角度が正しいことが最も大きなメリット</strong>である。</p>
+<p><strong>角度の正しさは、航海をする上では非常に重要な要素</strong>だ。南北があっているのだから、航海は、北の方向からどの角度に進めばよいかを定めることができる。そうすれば行くべき正しい方向を決められる。</p>
+</section>
+<section id="緯線経線が直交する" class="level4">
+<h4 class="anchored" data-anchor-id="緯線経線が直交する">緯線・経線が直交する</h4>
+<p>どの位置にいるかというのが、緯線・経線で大まかに把握しやすい。当然、面積や距離がずれているので、正確には測れない。ただ、ほかの地図だと緯線・経線がグニャグニャで即座の把握は面倒になっている。</p>
+</section>
+<section id="赤道付近は距離面積角度方位のすべてが正しい" class="level4">
+<h4 class="anchored" data-anchor-id="赤道付近は距離面積角度方位のすべてが正しい">赤道付近は距離・面積・角度・方位のすべてが正しい</h4>
+<p>以上のような作り方をしているので、赤道付近はほとんど引き延ばされていない。よって、<strong>赤道付近は、すべてが正しい地図になっている</strong>。</p>
+<p>この原理を応用したものが、後から紹介する[発展]横メルカトル図法である。</p>
+</section>
+</section>
+<section id="デメリット" class="level3">
+<h3 class="anchored" data-anchor-id="デメリット">デメリット</h3>
+<section id="距離が正しくない" class="level4">
+<h4 class="anchored" data-anchor-id="距離が正しくない">距離が正しくない</h4>
+<p>作成過程で横に引き延ばしているので、当然、距離は正しくない。</p>
+</section>
+<section id="面積が正しくない" class="level4">
+<h4 class="anchored" data-anchor-id="面積が正しくない">面積が正しくない</h4>
+<p>距離同様に面積も正しくない。実際にどれほど伸びているかを示している図が下である。</p>
+<p><img src="png\p126f_100.png" class="img-fluid"></p>
+<p>赤道付近では、ほとんど歪みがないが、<strong>南北に行くほど歪みがおおきくなる</strong>。</p>
+<p><a href="https://thetruesize.com/#?borders=1~!MTMwODg2ODE.NDM5NjMyNQ*MzA5NTA2Mzk(ODQ1MDYzOQ~!CONTIGUOUS_US*MTAwMjQwNzU.MjUwMjM1MTc(MTc1)MQ~!IN*NTI2NDA1MQ.Nzg2MzQyMQ)Mg~!CN*OTkyMTY5Nw.NzMxNDcwNQ(MjI1)Mw">True size of</a>というサイトでは、このメルカトル図法によって、どれほど国の大きさが大きくなっているのかを視覚的に見ることができる。</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">注意</span>注意
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>このサイトで注意すべきなのは、緯度の高い地域で比較しても意味がないことである。メルカトル図法は、緯度が高いほど歪みが大きくなる。例えば、いくらロシアが以外にも小さい国だということを示すために、日本の地図をロシア近くに持って行っても、それは間違っている。</p>
+<p>比べるなら、赤道付近で行うべきであろう。そうすれば、正確な国の大きさが比較できる。</p>
+</div>
+</div>
+<p>実際の大きさを視覚的に地球儀で比べてみるなら、この<a href="https://arnofiva.github.io/world-sizes/">World Size</a>というサイトもおすすめだ。</p>
+</section>
+<section id="方位が正しくない" class="level4">
+<h4 class="anchored" data-anchor-id="方位が正しくない">方位が正しくない</h4>
+<p>メルカトル図法は、方位が正しいと誤解されがちである。確かに、メルカトル図法は、<strong>南北方向</strong>の方位は正しい。しかし、<strong>東西方向の方位は正しくない。</strong></p>
+<p>日本の裏側はどこか。それは紛れもなく皆が「ブラジル」と答えるであろう。<strong>「裏側」ということは、日本から真東（もしくは真西）に進めば裏側にたどり着くはず</strong>だ。</p>
+<p>しかし、<strong>メルカトル図法で東に進むと、アメリカに突き当たる</strong>。メルカトル図法の地図において、日本の裏側はアメリカを示すのである。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="png\Brasil_to_Japan.png" class="img-fluid figure-img"></p>
+<figcaption>東京から真東に向かうと</figcaption>
+</figure>
+</div>
+<p>緯度が高いほど歪みが大きく、緯度が低いほど歪みが小さい地図であるから、よく考えてみれば当然だ。</p>
+</section>
+</section>
+<section id="まとめると" class="level3">
+<h3 class="anchored" data-anchor-id="まとめると">まとめると…</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>距離</th>
+<th>面積</th>
+<th>角度</th>
+<th>方位</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>メルカトル図法</td>
+<td>✖（赤道付近のみ〇）</td>
+<td>✖（赤道付近のみ〇）</td>
+<td>すべての地点で〇</td>
+<td>南北方向のみ〇（東西方向は✖）</td>
+</tr>
+</tbody>
+</table>
+<p>距離も面積も東西方位も異なるこのメルカトル図法は、決して世界地図のグローバルスタンダードにはなるべきではなかったのだが、現状は地図の需要の急拡大により、一目ですべての国がわかるメルカトル図法が「世界地図」として広く普及した。</p>
+</section>
+</section>
+<section id="発展横メルカトル図法" class="level2">
+<h2 class="anchored" data-anchor-id="発展横メルカトル図法">[発展]横メルカトル図法</h2>
+<p>先ほど伝えたようにメルカトル図法は、<strong>赤道付近以外は</strong>ズレズレである。それは、<strong>赤道付近は引き延ばしていない</strong>からである。</p>
+<p>日本地図でこのメルカトル図法を使うと、あまりにも歪む。<strong>では、剥き方を変えてみたら、どうなるか。</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="png\p400f_100.png" class="img-fluid figure-img"></p>
+<figcaption>縦に剥く</figcaption>
+</figure>
+</div>
+<p>こうすれば、<strong>これまでの剥き方では赤道付近に来ていた正確な部分が、日本に来るではないか。</strong></p>
+<p>で、これを引き延ばすと、こうなる。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="png\p410f_100.png" class="img-fluid figure-img"></p>
+<figcaption>横メルカトル図法</figcaption>
+</figure>
+</div>
+<p>ここから、日本の部分だけを切り出せば、距離・面積・角度・方位がほぼすべて等しい最強の地図ができるわけだ。これを<strong>横メルカトル図法</strong>という。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="png\yokomerukatoru.png" class="img-fluid figure-img"></p>
+<figcaption>横メルカトル図法の日本地図</figcaption>
+</figure>
+</div>
+<p>この横メルカトル図法を国際基準に合わせた形が、現在の多くの地図で使われる<strong>UTM（ユニバーサル横メルカトル）図法</strong>手法であり、日本の<a href="https://maps.gsi.go.jp/#5/36.104611/140.084556/&amp;base=std&amp;ls=std&amp;disp=1&amp;vs=c1g1j0h0k0l0u0t0z0r0s0m0f1">地理院地図</a>もこの書き方である。</p>
+<p>このようにすることで、その地域を示す小さな地図は、この方法を使うことで、ほとんどズレなく書くことができるのである。</p>
+<p>地理学者メルカトルに感謝しなければなるまい。</p>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "コピーしました");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "コピーしました");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
