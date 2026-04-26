@@ -8,7 +8,7 @@ website:
   sidebar:
     style: "docked"
     search: true
-    collapse-level: 1  # ★これを入れると、クリックで開閉（収納）できるようになります！
+    collapse-level: 1 
 
     contents:
       # 1. ホーム
