@@ -2,7 +2,7 @@
 title: "社会科のおもちゃ箱"
 ---
 
-![](png\Logo-Syakaika.png)
+![](png/Logo-Syakaika.png)
 
 ## サイトの概要
 
