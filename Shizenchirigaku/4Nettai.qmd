@@ -1,29 +1,114 @@
 ---
 title: "４　各気候の特徴"
 ---
+
+
+::: {.callout-note}
+
+現在執筆途中です。
+
+:::
+
+
 ![ケッペンの気候区分](png\keppen.png)
 
-# 熱帯
-## 気候の特徴
-地球表面の36％を占める。
-
-降水は、局所的に短時間に集中して強雨になることが多い。
+## 熱帯 A
+### 気候の特徴
+地球表面の36％を占める。降水は、局所的に短時間に集中して強雨になることが多い。
 
 熱帯収束帯のかかり方によって、Af（年間を通じて収束下）、Am（季節的に収束下）に区分される。
 
-* 赤道付近では、亜熱帯高圧帯からの貿易風が卓越
-* 上昇気流が発生し、活発な雲が帯状に発生
+赤道付近では、亜熱帯高圧帯からの貿易風で、上昇気流が発生する。活発な雲が帯状に発生し、**スコール**が発生する。
 
-## 人の暮らし
-### 住居
-* 湿気を防ぐため高床式住居　オセアニアでは、熱帯植物の葉や茎を使用して作られる。
 
-### 衣服
-* インドのサリー、ガーナのケンテなど
-* 一枚の布を体に巻き付ける
+::: {.panel-tabset}
+## Af・Am 熱帯雨林気候
 
-# 乾燥帯
-## 砂漠地域が分布する場所
+**ジャカルタの雨温図(筆者作成・データ：気象庁)**
+```{r}
+#| echo: false
+#| message: false
+#| results: hide
+#| warning: false
+library(tidyverse)
+
+dfa <- data.frame(
+  month = 1:12,
+  temp = c(26.9, 26.8, 27.4, 27.9, 28.0, 27.7, 27.3, 27.6, 27.8, 27.9, 27.7, 27.3),
+  precip = c(307.1, 359.5, 166.5, 107.4, 90.1, 50.6, 84.9, 36.2, 42.6, 56.7, 80.4, 180.4)
+)
+
+# 調整用パラメータ（画像の状態に合わせて微調整）
+coeff <- 10    # 気温の傾き具合
+offset <- 0    # 今回は底上げせず、倍率だけで調整する例です
+
+ggplot(dfa, aes(x = factor(month))) +
+  geom_bar(aes(y = precip), stat = "identity", fill = "skyblue", alpha = 0.8) +
+  # 気温を10倍して表示（30度なら300の高さにくる）
+  geom_line(aes(y = temp * coeff + offset, group = 1), color = "red", size = 1) +
+  geom_point(aes(y = temp * coeff + offset), color = "red") +
+  
+  scale_y_continuous(
+    name = "降水量 (mm)",
+    limits = c(0, 500), # グラフ全体の高さを固定
+    sec.axis = sec_axis(
+      trans = ~ . / coeff, 
+      name = "気温 (℃)",
+      breaks = seq(0, 50, by = 10) 
+    )
+  ) +
+  labs(title = "ジャカルタ（気象庁2025）", x = "月") +
+  theme_minimal()
+```
+
+
+
+## Aw サバナ気候
+
+**インプフォンド コンゴ（共和国）の雨温図(筆者作成・データ：気象庁)**
+```{r}
+#| echo: false
+#| message: false
+#| results: hide
+#| warning: false
+df_s <- data.frame(
+  month = 1:12,
+  temp = c(25.7, 26.8, 26.9, 27.0, 26.5, 25.8, 25.2, 25.2, 25.2, 25.3, 25.7, 25.7),
+  precip = c(55.1, 80.5, 145.7, 134.7, 152.8, 128.6, 145.1, 154.9, 182.0, 180.9, 164.1, 71.9)
+)
+
+# 調整用パラメータ（画像の状態に合わせて微調整）
+coeff <- 10    # 気温の傾き具合
+offset <- 0    # 今回は底上げせず、倍率だけで調整する例です
+
+ggplot(df_s, aes(x = factor(month))) +
+  geom_bar(aes(y = precip), stat = "identity", fill = "skyblue", alpha = 0.8) +
+  # 気温を10倍して表示（30度なら300の高さにくる）
+  geom_line(aes(y = temp * coeff + offset, group = 1), color = "red", size = 1) +
+  geom_point(aes(y = temp * coeff + offset), color = "red") +
+  
+  scale_y_continuous(
+    name = "降水量 (mm)",
+    limits = c(0, 500), # グラフ全体の高さを固定
+    sec.axis = sec_axis(
+      trans = ~ . / coeff, 
+      name = "気温 (℃)",
+      breaks = seq(0, 50, by = 10) 
+    )
+  ) +
+  labs(title = "インプフォンド コンゴ（共和国）", x = "月") +
+  theme_minimal()
+```
+
+明確に乾季があることがわかる。
+
+
+:::
+
+
+
+## 乾燥帯 B
+### 砂漠地域が分布する場所
 **中緯度高気圧帯の影響を受ける地域**　Ex）サハラ砂漠、中東地域
 
 **海洋から遠く離れた地域**　Ex）ゴビ砂漠、タクラマカン砂漠
@@ -32,9 +117,7 @@ title: "４　各気候の特徴"
 
 **山脈の風下側**　Ex）パタゴニア
 
-
-
-## 砂漠気候の特徴
+### 砂漠気候の特徴
 降水量は1年を通じて少ない。地球の1/3は砂漠地帯に属する。相対湿度が低いため、気温の日較差が大きい（砂漠の土壌は日射の反射率が大きい）。
 
 **乾燥指数**（$AI$）：年平均降水量（$P$）$÷$ 可能蒸発散量($PET$)
@@ -44,7 +127,52 @@ title: "４　各気候の特徴"
 
 **オアシス**：砂漠土壌と岩盤の間に地下水が流下している場合に形成される
 
-## 乾燥地の農業
-乾燥地は降水量が少ないが、日照が十二分にあるため、水があれば非常に高い農業収穫が期待できる。
 
-# 温帯
+::: {.panel-tabset}
+
+## Bwk 砂漠気候
+
+```{r}
+#| echo: false
+#| message: false
+#| results: hide
+#| warning: false
+df_k <- data.frame(
+  month = 1:12,
+  temp = c(26.1, 29.1, 32.1, 34.6, 33.5, 30.3, 27.7, 26.6, 27.1, 28.4, 27.9, 26.2),
+  precip = c(1.0, 0.0, 2.2, 9.5, 36.7, 131.4, 206.5, 299.6, 185.5, 54.2, 4.3, 0.5)
+)
+
+# 調整用パラメータ（画像の状態に合わせて微調整）
+coeff <- 10    # 気温の傾き具合
+offset <- 0    # 今回は底上げせず、倍率だけで調整する例です
+
+ggplot(df_k, aes(x = factor(month))) +
+  geom_bar(aes(y = precip), stat = "identity", fill = "skyblue", alpha = 0.8) +
+  # 気温を10倍して表示（30度なら300の高さにくる）
+  geom_line(aes(y = temp * coeff + offset, group = 1), color = "red", size = 1) +
+  geom_point(aes(y = temp * coeff + offset), color = "red") +
+  
+  scale_y_continuous(
+    name = "降水量 (mm)",
+    limits = c(0, 500), # グラフ全体の高さを固定
+    sec.axis = sec_axis(
+      trans = ~ . / coeff, 
+      name = "気温 (℃)",
+      breaks = seq(0, 50, by = 10) 
+    )
+  ) +
+  labs(title = "キータ マリ（気象庁2025）", x = "月") +
+  theme_minimal()
+```
+
+## Tab 2
+
+content
+
+:::
+
+
+
+
+## 温帯
