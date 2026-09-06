@@ -73,8 +73,10 @@ website:
       
       - section: "教育(教員向け)"
         contents:
-          - href: Kyouiku/index.qmd   
-            text: 教育トップ
+          - href: https://yamachan050125.github.io/Kyouiku_gaku/
+            text: 学校教育のおもちゃばこ
+          - href: syakaika-sidouhou\index.qmd
+            text: 社会科指導法
 
 format:
   html:

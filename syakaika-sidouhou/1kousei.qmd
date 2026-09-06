@@ -1,0 +1,6 @@
+---
+title: "授業編　１. 授業の構成を考える"
+date: today
+author: "yamachan"
+format: html
+---
