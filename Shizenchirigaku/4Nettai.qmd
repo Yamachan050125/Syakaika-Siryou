@@ -1,5 +1,15 @@
 ---
 title: "４　各気候の特徴"
+date: today
+author: "yamachan"
+format:
+  html:
+    toc: true
+    toc-title: "目次"
+    number-sections: true
+execute:
+  freeze: true
+lang: ja
 ---
 
 
