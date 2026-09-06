@@ -7,8 +7,6 @@ format:
     toc: true
     toc-title: "目次"
     number-sections: true
-execute:
-  freeze: true
 lang: ja
 ---
 
