@@ -4,3 +4,19 @@ date: today
 author: "yamachan"
 format: html
 ---
+::: {.callout-note}
+
+この記事は執筆途中です。
+
+:::
+
+このページでは、授業の構成法について記述します。
+
+## はじめに
+
+
+
+
+
+
+
