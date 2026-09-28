@@ -1,6 +1,13 @@
 ---
-title: "授業編　１. 授業の構成を考える"
+title: "授業編　１. 単元構成"
 date: today
 author: "yamachan"
 format: html
 ---
+
+## 単元について
+
+各教科書は、ご存じのように単元で別れています。
+
+
+
